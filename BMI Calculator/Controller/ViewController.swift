@@ -56,29 +56,31 @@ class ViewController: UIViewController {
         heightLabel.textColor = .darkGray
         heightLabel.text = "Height"
         
-        heightValueLabel.font = UIFont.systemFont(ofSize: 17)
-        heightValueLabel.textColor = .darkGray
-        heightValueLabel.text = "\(1.0)m"
-        
-        heightSlider.minimumValue = 0
-        heightSlider.maximumValue = 3
+        heightSlider.tag = 101
+        heightSlider.minimumValue = 0.5
+        heightSlider.maximumValue = 2.5
         heightSlider.value = 1.5
         heightSlider.minimumTrackTintColor = UIColor(rgb: 0x7472D2)
-        heightSlider.thumbTintColor = UIColor(rgb: 0x7472D2)
+        heightSlider.thumbTintColor = UIColor(rgb: 0x7472D2, alpha: 0.5)
+        
+        heightValueLabel.font = UIFont.systemFont(ofSize: 17)
+        heightValueLabel.textColor = .darkGray
+        heightValueLabel.text = "\(heightSlider.value)m"
         
         weightLabel.font = UIFont.systemFont(ofSize: 17)
         weightLabel.textColor = .darkGray
         weightLabel.text = "Weight"
         
-        weightValueLabel.font = UIFont.systemFont(ofSize: 17)
-        weightValueLabel.textColor = .darkGray
-        weightValueLabel.text = "\(100)kg"
-        
-        weightSlider.minimumValue = 0
+        weightSlider.tag = 102
+        weightSlider.minimumValue = 30
         weightSlider.maximumValue = 200
         weightSlider.value = 100
         weightSlider.minimumTrackTintColor = UIColor(rgb: 0x7472D2)
-        weightSlider.thumbTintColor = UIColor(rgb: 0x7472D2)
+        weightSlider.thumbTintColor = UIColor(rgb: 0x7472D2, alpha: 0.5)
+        
+        weightValueLabel.font = UIFont.systemFont(ofSize: 17)
+        weightValueLabel.textColor = .darkGray
+        weightValueLabel.text = "\(String(format: "%.0f", weightSlider.value))kg"
         
         calculateButton.backgroundColor = UIColor(rgb: 0x665ba2)
         calculateButton.setTitleColor(.white, for: .normal)
@@ -139,8 +141,27 @@ class ViewController: UIViewController {
     }
     
     func addActions() {
-        
+        heightSlider.addTarget(self, action: #selector(sliderValueChanged(_:)), for: .valueChanged)
+        weightSlider.addTarget(self, action: #selector(sliderValueChanged(_:)), for: .valueChanged)
+        calculateButton.addTarget(self, action: #selector(calculateButtonPressed(_:)), for: .touchUpInside)
     }
-
+    
+    @objc func sliderValueChanged(_ sender: UISlider) {
+        if sender.tag == 101 {
+            let heightValue = String(format: "%.2f", sender.value)
+            heightValueLabel.text = "\(heightValue)m"
+        } else if sender.tag == 102 {
+            let weightValue = String(format: "%.0f", sender.value)
+            weightValueLabel.text = "\(weightValue)kg"
+        }
+    }
+    
+    @objc func calculateButtonPressed(_ sender: UIButton) {
+        let height = heightSlider.value
+        let weight = weightSlider.value
+        let BMI = weight / (height * height)
+        
+        print("BMI: \(BMI)")
+    }
 }
 
