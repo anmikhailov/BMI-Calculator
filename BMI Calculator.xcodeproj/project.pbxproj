@@ -13,6 +13,7 @@
 		842F2DD529E7DAC800FAC42A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 842F2DD329E7DAC800FAC42A /* Main.storyboard */; };
 		842F2DD729E7DACA00FAC42A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 842F2DD629E7DACA00FAC42A /* Assets.xcassets */; };
 		842F2DDA29E7DACA00FAC42A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 842F2DD829E7DACA00FAC42A /* LaunchScreen.storyboard */; };
+		842F2DE429E7EDAE00FAC42A /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842F2DE329E7EDAE00FAC42A /* Color.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		842F2DD629E7DACA00FAC42A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		842F2DD929E7DACA00FAC42A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		842F2DDB29E7DACA00FAC42A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		842F2DE329E7EDAE00FAC42A /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,13 +60,30 @@
 			children = (
 				842F2DCD29E7DAC800FAC42A /* AppDelegate.swift */,
 				842F2DCF29E7DAC800FAC42A /* SceneDelegate.swift */,
-				842F2DD129E7DAC800FAC42A /* ViewController.swift */,
+				842F2DE229E7ED8300FAC42A /* Extensions */,
+				842F2DE129E7ED6100FAC42A /* Controller */,
 				842F2DD329E7DAC800FAC42A /* Main.storyboard */,
 				842F2DD629E7DACA00FAC42A /* Assets.xcassets */,
 				842F2DD829E7DACA00FAC42A /* LaunchScreen.storyboard */,
 				842F2DDB29E7DACA00FAC42A /* Info.plist */,
 			);
 			path = "BMI Calculator";
+			sourceTree = "<group>";
+		};
+		842F2DE129E7ED6100FAC42A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				842F2DD129E7DAC800FAC42A /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		842F2DE229E7ED8300FAC42A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				842F2DE329E7EDAE00FAC42A /* Color.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,6 +158,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				842F2DD229E7DAC800FAC42A /* ViewController.swift in Sources */,
+				842F2DE429E7EDAE00FAC42A /* Color.swift in Sources */,
 				842F2DCE29E7DAC800FAC42A /* AppDelegate.swift in Sources */,
 				842F2DD029E7DAC800FAC42A /* SceneDelegate.swift in Sources */,
 			);
