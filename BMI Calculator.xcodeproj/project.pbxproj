@@ -16,6 +16,7 @@
 		842F2DE429E7EDAE00FAC42A /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842F2DE329E7EDAE00FAC42A /* Color.swift */; };
 		842F2DE629E88A5F00FAC42A /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842F2DE529E88A5F00FAC42A /* ResultViewController.swift */; };
 		845BC28829EA90620099DA71 /* CalculatorBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845BC28729EA90620099DA71 /* CalculatorBrain.swift */; };
+		845BC28A29EA96AF0099DA71 /* BMI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845BC28929EA96AF0099DA71 /* BMI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		842F2DE329E7EDAE00FAC42A /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		842F2DE529E88A5F00FAC42A /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		845BC28729EA90620099DA71 /* CalculatorBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorBrain.swift; sourceTree = "<group>"; };
+		845BC28929EA96AF0099DA71 /* BMI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BMI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				845BC28729EA90620099DA71 /* CalculatorBrain.swift */,
+				845BC28929EA96AF0099DA71 /* BMI.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -174,6 +177,7 @@
 				845BC28829EA90620099DA71 /* CalculatorBrain.swift in Sources */,
 				842F2DD229E7DAC800FAC42A /* ViewController.swift in Sources */,
 				842F2DE429E7EDAE00FAC42A /* Color.swift in Sources */,
+				845BC28A29EA96AF0099DA71 /* BMI.swift in Sources */,
 				842F2DCE29E7DAC800FAC42A /* AppDelegate.swift in Sources */,
 				842F2DE629E88A5F00FAC42A /* ResultViewController.swift in Sources */,
 				842F2DD029E7DAC800FAC42A /* SceneDelegate.swift in Sources */,
