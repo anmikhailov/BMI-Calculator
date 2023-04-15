@@ -21,6 +21,8 @@ class ViewController: UIViewController {
     let weightValueLabel = UILabel()
     let weightSlider = UISlider()
     let calculateButton = UIButton()
+    
+    var calculatorBrain = CalculatorBrain()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -157,12 +159,10 @@ class ViewController: UIViewController {
     }
     
     @objc func calculateButtonPressed(_ sender: UIButton) {
-        let height = heightSlider.value
-        let weight = weightSlider.value
-        let BMI = weight / (height * height)
+        calculatorBrain.calculateBMI(height: heightSlider.value, weight: weightSlider.value)
         
         let resultVC = ResultViewController()
-        resultVC.bmiValue = String(format: "%.1f", BMI)
+        resultVC.bmiValue = calculatorBrain.getBMIValue()
         self.present(resultVC, animated: true)
     }
 }
