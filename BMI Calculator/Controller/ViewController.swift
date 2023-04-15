@@ -161,7 +161,9 @@ class ViewController: UIViewController {
         let weight = weightSlider.value
         let BMI = weight / (height * height)
         
-        print("BMI: \(BMI)")
+        let resultVC = ResultViewController()
+        resultVC.bmiValue = String(format: "%.1f", BMI)
+        self.present(resultVC, animated: true)
     }
 }
 
