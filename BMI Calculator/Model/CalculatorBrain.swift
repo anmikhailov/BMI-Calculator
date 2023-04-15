@@ -28,4 +28,12 @@ struct CalculatorBrain {
     func getBMIValue() -> String {
         return String(format: "%.1f", bmi?.value ?? 0.0)
     }
+    
+    func getAdvice() -> String {
+        return bmi?.advice ?? ""
+    }
+    
+    func getColor() -> UIColor {
+        return bmi?.color ?? .white
+    }
 }

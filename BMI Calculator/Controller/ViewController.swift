@@ -163,6 +163,8 @@ class ViewController: UIViewController {
         
         let resultVC = ResultViewController()
         resultVC.bmiValue = calculatorBrain.getBMIValue()
+        resultVC.advice = calculatorBrain.getAdvice()
+        resultVC.backgroundColor = calculatorBrain.getColor()
         self.present(resultVC, animated: true)
     }
 }
