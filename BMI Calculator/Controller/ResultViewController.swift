@@ -13,10 +13,12 @@ class ResultViewController: UIViewController {
     let resultsVStackView = UIStackView()
     let titleLabel = UILabel()
     let resultLabel = UILabel()
-    let recomendationLabel = UILabel()
+    let adviceLabel = UILabel()
     let recalculateButton = UIButton()
     
     var bmiValue = "0.0"
+    var advice = ""
+    var backgroundColor = UIColor()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,7 +29,7 @@ class ResultViewController: UIViewController {
     }
     
     func style() {
-        view.backgroundColor = UIColor(rgb: 0x337BC5)
+        view.backgroundColor = backgroundColor
         
         backgroundImage.image = UIImage(named: "result_background")
         backgroundImage.contentMode = .scaleAspectFill
@@ -47,10 +49,10 @@ class ResultViewController: UIViewController {
         resultLabel.textColor = .white
         resultLabel.font = UIFont.systemFont(ofSize: 80)
         
-        recomendationLabel.text = "EAT SOME MORE SNACKS"
-        recomendationLabel.textAlignment = .center
-        recomendationLabel.textColor = .white
-        recomendationLabel.font = UIFont.systemFont(ofSize: 20)
+        adviceLabel.text = advice
+        adviceLabel.textAlignment = .center
+        adviceLabel.textColor = .white
+        adviceLabel.font = UIFont.systemFont(ofSize: 20)
         
         recalculateButton.setTitle("RECALCULATE", for: .normal)
         recalculateButton.setTitleColor(UIColor(rgb: 0x7472D2), for: .normal)
@@ -64,14 +66,14 @@ class ResultViewController: UIViewController {
         
         resultsVStackView.addArrangedSubview(titleLabel)
         resultsVStackView.addArrangedSubview(resultLabel)
-        resultsVStackView.addArrangedSubview(recomendationLabel)
+        resultsVStackView.addArrangedSubview(adviceLabel)
         
         backgroundImage.translatesAutoresizingMaskIntoConstraints = false
         resultsVStackView.translatesAutoresizingMaskIntoConstraints = false
         recalculateButton.translatesAutoresizingMaskIntoConstraints = false
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
         resultLabel.translatesAutoresizingMaskIntoConstraints = false
-        recomendationLabel.translatesAutoresizingMaskIntoConstraints = false
+        adviceLabel.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
             resultsVStackView.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor),
@@ -96,16 +98,4 @@ class ResultViewController: UIViewController {
     @objc func recalculateButtonPressed(_ sender: UIButton) {
         self.dismiss(animated: true)
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
