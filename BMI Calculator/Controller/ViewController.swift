@@ -162,6 +162,7 @@ class ViewController: UIViewController {
         calculatorBrain.calculateBMI(height: heightSlider.value, weight: weightSlider.value)
         
         let resultVC = ResultViewController()
+        resultVC.modalPresentationStyle = .fullScreen
         resultVC.bmiValue = calculatorBrain.getBMIValue()
         resultVC.advice = calculatorBrain.getAdvice()
         resultVC.backgroundColor = calculatorBrain.getColor()
